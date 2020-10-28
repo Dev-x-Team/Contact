@@ -34,15 +34,21 @@ html {
 .button--green {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  border: 1px solid #121312;
+  color: #121312;
   text-decoration: none;
   padding: 10px 30px;
+  transition: rgba(0, 0, 0, 0.25) 0.25s ease-in;
+  transition-property: rgba(0, 0, 0, 0.25);
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  flex-basis: 45%;
 }
 
 .button--green:hover {
   color: #fff;
-  background-color: #3b8070;
+  background-color: #121312;
 }
 
 .button--grey {

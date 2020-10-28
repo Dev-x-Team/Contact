@@ -20,20 +20,13 @@
         >
           <font-awesome-icon :icon="['fab', 'github-alt']" />
         </a>
+
       </div>
 
       <div>
         <div class="card">
-          <h3>Contacts &rarr;</h3>
-          <ul>
-            <li>Email: <a>abdfnabd@gmail.com</a></li>
-          </ul>
-          <ul>
-            <li>Twitter: <a>@Dev-x</a></li>
-          </ul>
-          <ul>
-            <li>You can make a github issue: <a href="https://github.com/Dev-x-Team/Contact/issues">github issue</a></li>
-          </ul>
+          <h3>Documentation &rarr;</h3>
+          <p>Find in-depth information about Next.js features and API.</p>
         </div>
       </div>
     </div>
@@ -62,11 +55,6 @@ export default Vue.extend({});
 @font-face {
   font-family: DF;
   src: url(/fonts/df.otf);
-}
-
-@font-face {
-  font-family: Hacked;
-  src: url(/fonts/HACKED.ttf);
 }
 
 .container {
@@ -107,7 +95,7 @@ export default Vue.extend({});
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 2px solid black;
+  border: 1.7px solid black;
   border-radius: 2.5px;
   transition: rgba(0, 0, 0, 0.25) 0.25s ease-in;
   transition-property: rgba(0, 0, 0, 0.25);
@@ -120,24 +108,18 @@ export default Vue.extend({});
 .card:hover,
 .card:focus,
 .card:active {
+  color: #0070f3;
   box-shadow: 7px 7px 2px 1px black;
-  border: 2px solid black;
 }
 
 .card h3 {
-  font-family: Hacked;
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
-.card li {
+.card p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-  list-style: none;
-}
-
-a {
-  color: rgb(0, 119, 255);
 }
 </style>
