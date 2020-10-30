@@ -1,3 +1,5 @@
+$color: #121312;
+
 .title {
   font-family: DF;
   display: block;
@@ -53,4 +55,19 @@ a {
 
 strong {
   color: dodgerblue;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid $color;
+  color: $color;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: $color;
 }

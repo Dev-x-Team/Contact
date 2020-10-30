@@ -76,7 +76,6 @@ export default {
         repo.name = repoName;
 
         return {
-          route: "/repos/" + slug,
           payload: repo
         };
       });
