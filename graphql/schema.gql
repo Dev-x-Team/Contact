@@ -1,7 +1,10 @@
 type Repo {
-  projectName: String! @unique
+  desc: String! @unique
   repoUrl: String! @unique
-  conStyle: String
+
+  # if fontawesome icon is brand or solid
+  brand: Boolean
+  solid: Boolean
   faI: String
 
   # this only for twitter & dev contacts

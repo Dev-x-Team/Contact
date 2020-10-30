@@ -8,15 +8,16 @@
         <div class="card">
           <h3>Contacts &rarr;</h3>
 
-          <ul v-for="repo in repos" :key="repo.projectName">
+          <ul v-for="repo in repos" :key="repo.desc">
             <li>
-              {{ repo.projectName }}
+              {{ repo.desc }}
 
               <strong v-if="repo.hashtag">{{ repo.hashtag_name }}</strong>
 
               <a :href="repo.repoUrl">
-                <a :class="`button--${repo.conStyle}`">
-                  <font-awesome-icon :icon="['fab', `${repo.faI}`]" />
+                <a class="btn">
+                  <fai v-if="repo.brand" :icon="['fab', `${repo.faI}`]" />
+                  <fai v-if="repo.solid" :icon="repo.faI" />
                 </a>
               </a>
             </li>
@@ -30,17 +31,21 @@
 <script>
 import Vue from "vue";
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faDev } from "@fortawesome/free-brands-svg-icons";
+import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faGithubAlt);
-library.add(faDev);
-library.add(faTwitter);
+// This is important, we are going to let Nuxt.js worry about the CSS
+config.autoAddCss = false;
 
-Vue.component("font-awesome-icon", FontAwesomeIcon);
+// You can add your icons directly in this plugin. See other examples for how you
+// can add other styles or just individual icons.
+library.add(fab);
+library.add(fas);
+
+// Register the component globally
+Vue.component("fai", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
