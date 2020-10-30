@@ -1,8 +1,12 @@
 type Repo {
   projectName: String! @unique
   repoUrl: String! @unique
-  svgLogo: String
-  colorHex: String
+  conStyle: String
+  faI: String
+
+  # this only for twitter & dev contacts
+  hashtag: Boolean
+  hashtag_name: String
 }
 
 type Query {

@@ -4,7 +4,7 @@
 
 ```bash
 # install dependencies
-$ npm install
+$ npm i
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -15,6 +15,9 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# in deploy
+$ firebase deploy --only hosting:contact-devx
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

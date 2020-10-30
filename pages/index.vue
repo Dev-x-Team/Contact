@@ -3,36 +3,23 @@
     <div>
       <Logo />
       <h1 class="title">contact.dev-x</h1>
-      <div class="links">
-        <a
-          href="https://dev.to/abdfnx"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          <font-awesome-icon :icon="['fab', 'dev']" />
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          <font-awesome-icon :icon="['fab', 'github-alt']" />
-        </a>
-      </div>
 
       <div>
         <div class="card">
           <h3>Contacts &rarr;</h3>
-          <ul>
-            <li>Email: <a>abdfnabd@gmail.com</a></li>
-          </ul>
-          <ul>
-            <li>Twitter: <a>@Dev-x</a></li>
-          </ul>
-          <ul>
-            <li>You can make a github issue: <a href="https://github.com/Dev-x-Team/Contact/issues">github issue</a></li>
+
+          <ul v-for="repo in repos" :key="repo.projectName">
+            <li>
+              {{ repo.projectName }}
+
+              <strong v-if="repo.hashtag">{{ repo.hashtag_name }}</strong>
+
+              <a :href="repo.repoUrl">
+                <a :class="`button--${repo.conStyle}`">
+                  <font-awesome-icon :icon="['fab', `${repo.faI}`]" />
+                </a>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -40,104 +27,30 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faDev } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faGithubAlt);
 library.add(faDev);
+library.add(faTwitter);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
-export default Vue.extend({});
+export default {
+  asyncData({ payload }) {
+    return { repos: payload };
+  }
+};
 </script>
 
-<style>
-@font-face {
-  font-family: DF;
-  src: url(/fonts/df.otf);
-}
-
-@font-face {
-  font-family: Hacked;
-  src: url(/fonts/HACKED.ttf);
-}
-
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: DF;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-.card {
-  cursor: pointer;
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 2px solid black;
-  border-radius: 2.5px;
-  transition: rgba(0, 0, 0, 0.25) 0.25s ease-in;
-  transition-property: rgba(0, 0, 0, 0.25);
-  transition-duration: 0.25s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s;
-  flex-direction: column;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  box-shadow: 7px 7px 2px 1px black;
-  border: 2px solid black;
-}
-
-.card h3 {
-  font-family: Hacked;
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card li {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  list-style: none;
-}
-
-a {
-  color: rgb(0, 119, 255);
-}
+<style lang="scss">
+@import "index.scss";
 </style>
