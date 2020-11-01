@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nuxt />
+    <Bottom />
   </div>
 </template>
 
@@ -36,7 +37,15 @@ html {
 
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container__bottom {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts --port=2500",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
-    "test": "npm run test:unit && npm run test:e2e",
-    "test:unit": "cross-env TEST=unit ava ./test/specs/**/*",
-    "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
+    "d": "nuxt-ts --port=2500",
+    "b": "nuxt-ts build",
+    "s": "nuxt-ts start",
+    "g": "nuxt-ts generate",
+    "t": "npm run test:unit && npm run test:e2e",
+    "t:unit": "cross-env TEST=unit ava ./test/specs/**/*",
+    "t:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
