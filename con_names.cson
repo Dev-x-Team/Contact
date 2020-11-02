@@ -1,0 +1,30 @@
+"Contacts": 
+  "Twitter": 
+    "desc": "twitter"
+    "repoUrl": "https://twitter.com/Dev-x"
+    "conStyle": "#1DA1F2"
+    "brand": true
+    "solid": false
+    "faI": "twitter"
+    "hashtag": true
+    "hashtag_name": "@Dev-x"
+  
+  "Github_issue": 
+    "desc": "You can make a github issue: "
+    "repoUrl": "https://github.com/Dev-x-Team/Contact/issues"
+    "conStyle": "#181717"
+    "brand": true
+    "solid": false
+    "hashtag": false
+    "faI": "github-alt"
+  
+  "Dev": 
+    "desc": "You can contact the admin in Dev: "
+    "repoUrl": "https://dev.to/abdfnx"
+    "conStyle": "#0A0A0A"
+    "brand": true
+    "solid": false
+    "faI": "dev"
+    "hashtag": true
+    "hashtag_name": "@abdfnx"
+  

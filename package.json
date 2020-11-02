@@ -7,7 +7,7 @@
     "b": "nuxt-ts build",
     "s": "nuxt-ts start",
     "g": "nuxt-ts generate",
-    "t": "npm run test:unit && npm run test:e2e",
+    "t": "npm run t:unit && npm run t:e2e",
     "t:unit": "cross-env TEST=unit ava ./test/specs/**/*",
     "t:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
   },
