@@ -1,12 +1,8 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">contact.dev-x</h1>
-
       <div>
         <div class="card">
-          <h3>Contacts &rarr;</h3>
+          <h3><img src="/assets/icons/brand.png" width="190" /></h3>
 
           <ul v-for="repo in repos" :key="repo.desc">
             <li>
@@ -15,7 +11,7 @@
               <strong v-if="repo.hashtag">{{ repo.hashtag_name }}</strong>
 
               <a :href="repo.repoUrl">
-                <a class="btn">
+                <a :style="{ color: repo.conStyle }" class="btn">
                   <fai v-if="repo.brand" :icon="['fab', `${repo.faI}`]" />
                   <fai v-if="repo.solid" :icon="repo.faI" />
                 </a>
@@ -23,7 +19,6 @@
             </li>
           </ul>
         </div>
-      </div>
     </div>
   </div>
 </template>
@@ -39,8 +34,10 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 // This is important, we are going to let Nuxt.js worry about the CSS
 config.autoAddCss = false;
 
-// You can add your icons directly in this plugin. See other examples for how you
-// can add other styles or just individual icons.
+/* 
+  You can add your icons directly in this plugin. See other examples for how you
+  can add other styles or just individual icons.
+*/
 library.add(fab);
 library.add(fas);
 

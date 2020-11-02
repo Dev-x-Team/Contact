@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <Nuxt />
     <Bottom />
   </div>
@@ -8,12 +9,12 @@
 <style lang="scss">
 @font-face {
   font-family: DF;
-  src: url(/fonts/df.otf);
+  src: url(/assets/fonts/df.otf);
 }
 
 @font-face {
   font-family: Hacked;
-  src: url(/fonts/HACKED.ttf);
+  src: url(/assets/fonts/HACKED.ttf);
 }
 
 html {
@@ -50,5 +51,6 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 10px;
 }
 </style>

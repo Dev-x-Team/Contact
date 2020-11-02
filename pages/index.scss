@@ -1,4 +1,4 @@
-$color: #121312;
+$color: #f3f3f3;
 
 .title {
   font-family: DF;
@@ -60,11 +60,9 @@ strong {
 .btn {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid $color;
-  color: $color;
   text-decoration: none;
   padding: 10px 30px;
-  margin-left: 15px;
+  // margin-left: 5px;
 }
 
 .btn:hover {

@@ -1,5 +1,5 @@
 <template>
-  <svg viewBox="0 0 16 16" width="180" height="180" class="sc-AykKK btrElB">
+  <svg viewBox="0 0 16 16" width="60" height="30" class="NuxtLogo">
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -15,6 +15,11 @@
 .NuxtLogo {
   animation: 1s appear;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  align-content: center;
+  cursor: pointer;
 }
 
 @keyframes appear {
